@@ -9,9 +9,10 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-junit-reporter'),
-      require('@angular/cli/plugins/karma')
+      require('@angular/cli/plugins/karma'),
+      require('karma-spec-reporter')
     ],
-    reporters: ['junit'],
+    reporters: ['junit', 'spec'],
     junitReporter: {
         outputDir: 'karma-results',
         outputFile: 'karma-results.xml'
